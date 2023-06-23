@@ -5,12 +5,237 @@
     android:layout_height="match_parent"
     tools:context=".SettingsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:textSize="36dp"
-        android:layout_height="wrap_content"
-        android:text="Settings"
-        android:layout_gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="74dp"
+                android:layout_height="32dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Profile"
+                android:textColor="#29B029"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="157dp">
+
+            <ImageView
+                android:id="@+id/avatar"
+                android:layout_width="138dp"
+                android:layout_height="138dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/avatar" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="59dp">
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="John Doe"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_username"
+                android:layout_centerHorizontal="true"
+                android:text="johndoe@gmail.com"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_account_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Account settings"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_account_settings"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/edittextbackground"
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/account"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/tv_account_information"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Account information"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="8dp"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/edittextbackground"
+                    android:padding="10dp"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/account"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/tv_change_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Change password"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="8dp"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp">
+
+            <TextView
+                android:id="@+id/tv_general"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="General"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_general"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/edittextbackground"
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/account"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/tv_about_us"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="About us"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="8dp"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="46dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/rounded_background"
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Log out"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
 
 </FrameLayout>
