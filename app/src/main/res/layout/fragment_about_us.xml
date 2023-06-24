@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutUsFragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About us"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/saving" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="Money Tracker app is designed to provide an excellent and convenient experience for users. We are committed to delivering reliable and useful features that allow you to enjoy a modern lifestyle to the fullest.\n\nAt Money Tracker, we prioritize the benefits and satisfaction of our users. We continuously improve the quality of our products and services to meet all your needs. The trust and support from our users drive us to grow even further.\n\nWith a team of professional and passionate staff, Money Tracker aims to provide you with an outstanding experience along with smart and convenient solutions.\n\nExplore and experience the Money Tracker app today!"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Liên hệ chúng tôi" />
+
+    </LinearLayout>
+
+
+</FrameLayout>
