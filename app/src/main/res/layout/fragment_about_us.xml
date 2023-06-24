@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutUsFragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About us"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/saving" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ứng dụng Money Tracker ra đời với mục tiêu mang lại trải nghiệm tuyệt vời và thuận tiện cho người dùng. Chúng tôi cam kết cung cấp các tính năng đáng tin cậy và hữu ích để bạn có thể tận hưởng cuộc sống hiện đại một cách tốt nhất.\n\nTại Money Tracker, chúng tôi luôn đặt lợi ích và sự hài lòng của người dùng lên hàng đầu. Chúng tôi không ngừng nâng cao chất lượng sản phẩm và dịch vụ của mình để đáp ứng mọi nhu cầu của bạn. Sự tin tưởng và hỗ trợ từ phía người dùng là động lực giúp chúng tôi ngày càng phát triển.\n\nCùng với đội ngũ nhân viên chuyên nghiệp và đam mê, Money Tracker hy vọng mang đến cho bạn trải nghiệm tuyệt vời cùng những giải pháp thông minh và tiện lợi.\n\nHãy cùng khám phá và trải nghiệm ứng dụng Money Tracker ngay hôm nay!"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Liên hệ chúng tôi" />
+
+    </LinearLayout>
+
+
+</FrameLayout>
