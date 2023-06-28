@@ -3,6 +3,7 @@ package com.example.moneytracker;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -18,11 +19,33 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        Typeface customFont = Typeface.createFromAsset(getAssets(), "fonts/Poppins/Poppins-Regular.ttf");
+        Typeface boldFont = Typeface.createFromAsset(getAssets(), "fonts/Poppins/Poppins-Bold.ttf");
+        Typeface semiBoldFont = Typeface.createFromAsset(getAssets(), "fonts/Poppins/Poppins-SemiBold.ttf");
+
+
+        TextView title = findViewById(R.id.register_title);
+        TextView hadAccount = findViewById(R.id.had_account);
+
         usernameTxt = findViewById(R.id.usernameEditText);
         passwordTxt = findViewById(R.id.passwordEditText);
         retypePasswordTxt = findViewById(R.id.retypePasswordEditText);
         loginBtn = findViewById(R.id.loginNavBtn);
         signupBtn = findViewById(R.id.signupButton);
+
+
+        title.setTypeface(boldFont);
+        hadAccount.setTypeface(customFont);
+
+        usernameTxt.setTypeface(customFont);
+        passwordTxt.setTypeface(customFont);
+        retypePasswordTxt.setTypeface(customFont);
+
+        loginBtn.setTypeface(customFont);
+        signupBtn.setTypeface(semiBoldFont);
+
+
         DB = new DBHelper(this);
 
 

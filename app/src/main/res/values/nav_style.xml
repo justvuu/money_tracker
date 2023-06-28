@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="InactiveItemTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#BD1919</item>
+    </style>
+</resources>

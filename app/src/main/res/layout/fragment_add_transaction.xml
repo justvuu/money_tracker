@@ -1,167 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_transaction_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddTransactionFragment">
+    android:background="#EDE8E8"
+    tools:context=".AddTransactionFragment"
+    >
 
     <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:gravity="start"
-            android:text="Add Transaction"
-            android:textSize="24dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="15dp"
-            android:textColor="#29B029" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Details"
-            android:layout_marginStart="30dp"
-            android:textStyle="bold"
-            android:textSize="20dp" />
-
-        <LinearLayout
-            android:layout_width="380dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="25dp"
-            android:orientation="vertical">
-
-            <FrameLayout
-                android:layout_width="350dp"
-                android:layout_height="60dp"
-                android:background="@drawable/edittextbackground"
-                android:layout_marginTop="10dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="3">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/ic_launcher_background"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="10dp" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="2">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Dinner"
-                            android:textSize="18dp"
-                            android:textStyle="bold" />
-
-                        <Spinner
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:hint="Select an option" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </FrameLayout>
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Date"
-            android:layout_marginStart="30dp"
-            android:textStyle="bold"
-            android:textSize="20dp" />
-
-        <LinearLayout
-            android:layout_width="380dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="25dp"
-            android:orientation="vertical">
-
-            <FrameLayout
-                android:layout_width="350dp"
-                android:layout_height="60dp"
-                android:background="@drawable/edittextbackground">
-
-                <LinearLayout
-                    android:layout_width="345dp"
-                    android:layout_height="match_parent"
-                    android:weightSum="3">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="10dp"
-                        android:src="@drawable/ic_launcher_background" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="2"
-                        android:orientation="vertical">
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="Transaction Name" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </FrameLayout>
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/add_category_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Add new category"/>
-        <Button
-            android:layout_width="350dp"
-            android:layout_height="50dp"
-            android:layout_gravity="bottom"
-            android:layout_marginTop="10dp"
-            android:background="#29B029"
-            android:layout_marginStart="35dp"
-            android:text="Add Transaction"
-            android:textColor="#FFFFFF" />
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="6"
-        android:layout_marginTop="10dp"
-        android:gravity="center">
+        android:orientation="vertical"
+        android:padding="16dp"
+        >
+        <TextView
+            android:id="@+id/add_new_transaction_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Transaction"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:textColor="#29B029" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/new_transaction_amount_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Amount"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/transaction_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter the amount"
+                android:background="@drawable/edittextbackground"
+                android:backgroundTint="#fff"
+                android:paddingHorizontal="10dp"
+                android:inputType="numberDecimal"
+                android:paddingVertical="15dp"/>
+
+            <TextView
+                android:id="@+id/new_transaction_category_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Category"
+                android:textSize="14dp" />
+
+            <Spinner
+                android:id="@+id/categorySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittextbackground"
+                android:backgroundTint="#fff"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="15dp"
+                />
+
+            <TextView
+                android:id="@+id/add_category_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add new category"
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:textColor="#125FD1"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/new_transaction_date_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Date"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/dateEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:focusable="false"
+                android:background="@drawable/edittextbackground"
+                android:backgroundTint="#fff"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="15dp"
+                android:hint="Select Date" />
+
+            <TextView
+                android:id="@+id/new_transaction_description_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Description"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/transaction_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittextbackground"
+                android:backgroundTint="#fff"
+                android:hint="Enter the description"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="15dp" />
+
+            <Button
+                android:id="@+id/add_trans_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#29B029"
+                android:paddingVertical="20dp"
+                android:text="Add Transaction"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+        </ScrollView>
 
     </LinearLayout>
+
+
+
 
 </FrameLayout>

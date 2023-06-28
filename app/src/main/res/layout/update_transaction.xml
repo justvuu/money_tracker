@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/updatr_trans_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/update_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:gravity="center"
+        android:text="Update Transaction"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#29B029" />
+
+    <TextView
+        android:id="@+id/update_amount_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Amount"
+        android:textColor="#201F1F"
+        android:textSize="14dp" />
+
+    <EditText
+        android:id="@+id/transaction_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the amount"
+        android:background="@drawable/edittextbackground"
+        android:paddingHorizontal="10dp"
+        android:inputType="numberDecimal"
+        android:paddingVertical="15dp"/>
+
+    <TextView
+        android:id="@+id/update_category_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Category"
+        android:textColor="#201F1F"
+        android:textSize="14dp" />
+
+    <Spinner
+        android:id="@+id/categorySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittextbackground"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="15dp"
+        />
+
+    <TextView
+        android:id="@+id/update_date_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Date"
+        android:textColor="#201F1F"
+        android:textSize="14dp" />
+
+    <EditText
+        android:id="@+id/dateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:focusable="false"
+        android:background="@drawable/edittextbackground"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="15dp"
+        android:hint="Select Date" />
+
+    <TextView
+        android:id="@+id/update_description_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Description"
+        android:textColor="#201F1F"
+        android:textSize="14dp" />
+
+    <EditText
+        android:id="@+id/transaction_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the description"
+        android:background="@drawable/edittextbackground"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="15dp"/>
+
+    <Button
+        android:id="@+id/update_trans_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#29B029"
+        android:paddingVertical="20dp"
+        android:text="Update"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

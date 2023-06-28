@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- TODO: Update blank fragment layout -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/category_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".CategoryFragment">
+
+
+    <ImageView
+        android:id="@+id/category_list_move_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back_icon"/>
+
+    <TextView
+        android:id="@+id/category_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category List"
+        android:textStyle="bold"
+        android:textColor="#29B029"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"
+        android:textSize="26dp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/category_scroll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingHorizontal="20dp"-->
+<!--                android:paddingVertical="20dp"-->
+<!--                android:layout_marginBottom="20dp"-->
+<!--                android:background="@drawable/edittextbackground">-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Shopping"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textSize="20dp"-->
+<!--                    android:layout_marginRight="30dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Expense"-->
+<!--                    android:textStyle="italic"-->
+<!--                    android:textSize="18dp"-->
+<!--                    />-->
+<!--                <Space-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="0dp"-->
+<!--                    android:layout_weight="1"/>-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Edit"-->
+<!--                    android:textColor="#0986EA"-->
+<!--                    android:textStyle="italic"-->
+<!--                    android:textSize="20dp"-->
+<!--                    />-->
+<!--            </LinearLayout>-->
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

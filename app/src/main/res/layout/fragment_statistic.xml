@@ -3,73 +3,113 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EDE8E8"
     tools:context=".StatisticFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="16dp"
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/statistic_title"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:gravity="start"
-            android:text="Add Transaction"
+            android:text="Statistic"
             android:textSize="24dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="15dp"
-            android:textColor="#29B029" />
+            android:textColor="#29B029"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            />
 
+        <TextView
+            android:id="@+id/statistic_month_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Month"
+            android:textSize="14dp"
+            />
+
+        <Spinner
+            android:id="@+id/month_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/edittextbackground"
+            android:backgroundTint="#fff"
+            android:layout_marginBottom="20dp"
+            />
+
+
+        <TextView
+            android:id="@+id/statistic_chart_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chart"
+            android:textSize="14dp"
+            />
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="198dp">
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittextbackground"
+            android:backgroundTint="#fff"
+            android:paddingVertical="16dp"
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
                     android:orientation="vertical">
 
                     <View
-                        android:layout_width="40dp"
-                        android:layout_height="150dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_weight="1"
-                        android:background="#29B029" />
+                        android:id="@+id/income_column"
+                        android:layout_width="80dp"
+                        android:layout_height="200dp"
+                        android:background="@drawable/edittextbackground"
+                        android:backgroundTint="#29B029"/>
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="Income" />
 
                 </LinearLayout>
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="0dp" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
                     android:orientation="vertical">
 
                     <View
-                        android:layout_width="40dp"
-                        android:layout_height="50dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_weight="1"
-                        android:background="#D90909" />
+                        android:id="@+id/expense_column"
+                        android:layout_width="80dp"
+                        android:layout_height="280dp"
+                        android:backgroundTint="#D90909"
+                        android:background="@drawable/edittextbackground" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
                         android:text="Expense" />
 
                 </LinearLayout>
@@ -79,249 +119,29 @@
         </FrameLayout>
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="August transactions"
-            android:layout_marginStart="30dp"
-            android:textStyle="bold"
-            android:textSize="16dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            >
 
-        </TextView>
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/edittextbackground"
+            android:backgroundTint="#fff"
+            android:padding="16dp"
+            android:layout_marginTop="15dp">
         <LinearLayout
-            android:layout_width="350dp"
+            android:id="@+id/statistic_scroll_layout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+
             android:orientation="vertical">
-            <FrameLayout
-                android:layout_width="350dp"
-                android:layout_height="60dp"
-                android:background="@drawable/edittextbackground">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="3"
-                    >
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/saving"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="10dp">
 
-                    </ImageView>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="2"
-                        >
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Dinner"
-                            android:textSize="18dp"
-                            android:textStyle="bold"
-                            >
-
-                        </TextView>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="August 14 - 02:35 pm">
-
-                        </TextView>
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$45.98"
-                        android:layout_gravity="center_vertical"
-                        android:textStyle="bold"
-                        android:textSize="18dp"
-                        android:textColor="#D90909">
-
-                    </TextView>
-                </LinearLayout>
-
-            </FrameLayout>
-
-
-            <FrameLayout
-                android:layout_width="350dp"
-                android:layout_height="60dp"
-                android:background="@drawable/edittextbackground"
-                android:layout_marginTop="10dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="3"
-                    >
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/increase"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="10dp">
-
-                    </ImageView>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="2"
-                        >
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Dinner"
-                            android:textSize="18dp"
-                            android:textStyle="bold"
-                            >
-
-                        </TextView>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="August 14 - 02:35 pm">
-
-                        </TextView>
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$45.98"
-                        android:layout_gravity="center_vertical"
-                        android:textStyle="bold"
-                        android:textSize="18dp"
-                        android:textColor="#D90909">
-
-                    </TextView>
-                </LinearLayout>
-
-            </FrameLayout>
-            <FrameLayout
-                android:layout_width="350dp"
-                android:layout_height="60dp"
-                android:background="@drawable/edittextbackground"
-                android:layout_marginTop="10dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="3"
-                    >
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/avatar"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="10dp">
-
-                    </ImageView>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="2"
-                        >
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Dinner"
-                            android:textSize="18dp"
-                            android:textStyle="bold"
-                            >
-
-                        </TextView>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="August 14 - 02:35 pm">
-
-                        </TextView>
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$45.98"
-                        android:layout_gravity="center_vertical"
-                        android:textStyle="bold"
-                        android:textSize="18dp"
-                        android:textColor="#D90909">
-
-                    </TextView>
-                </LinearLayout>
-
-            </FrameLayout>
-            <FrameLayout
-                android:layout_width="350dp"
-                android:layout_height="60dp"
-                android:background="@drawable/edittextbackground"
-                android:layout_marginTop="10dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="3"
-                    >
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/decrease"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="10dp">
-
-                    </ImageView>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="2"
-                        >
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Dinner"
-                            android:textSize="18dp"
-                            android:textStyle="bold"
-                            >
-
-                        </TextView>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="August 14 - 02:35 pm">
-
-                        </TextView>
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$45.98"
-                        android:layout_gravity="center_vertical"
-                        android:textStyle="bold"
-                        android:textSize="18dp"
-                        android:textColor="#D90909">
-
-                    </TextView>
-                </LinearLayout>
-
-            </FrameLayout>
         </LinearLayout>
-
+        </ScrollView>
 
     </LinearLayout>
+    </ScrollView>
 
 
 
