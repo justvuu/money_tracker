@@ -9,80 +9,96 @@
     android:background="#FFFFFF"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="303dp"
-        android:src="@drawable/saving"
-        android:layout_gravity="center"
-        />
-
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Money Tracker"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:textSize="32dp"
-        />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:gravity="center"
-        android:text="Track Your Finances, Master Your Money!" />
-
-    <EditText
-        android:id="@+id/usernameEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edittextbackground"
-        android:padding="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="15dp"
-        android:hint="Username" />
-
-    <EditText
-        android:id="@+id/passwordEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:background="@drawable/edittextbackground"
-        android:hint="Password"
-        android:layout_marginBottom="15dp"
-        android:padding="16dp"/>
-
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#3A55DD"
-        android:paddingVertical="15dp"
-        android:gravity="center"
-        android:text="Login" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="30dp">
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Not a member?"
-            android:layout_marginRight="5dp"/>
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/registerNavBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Register now"
-            android:textColor="#0D2FEA"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:src="@drawable/logo"
+                android:layout_marginVertical="20dp"
+                android:layout_gravity="center"
+                />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/app_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Money Tracker"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="32dp"
+                />
+
+            <TextView
+                android:id="@+id/app_description"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:text="Track Your Finances, Master Your Money!" />
+
+            <EditText
+                android:id="@+id/usernameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittextbackground"
+                android:padding="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:hint="Username" />
+
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:background="@drawable/edittextbackground"
+                android:hint="Password"
+                android:layout_marginBottom="15dp"
+                android:padding="16dp"/>
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#3A55DD"
+                android:paddingVertical="15dp"
+                android:gravity="center"
+                android:text="Login" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/not_a_member_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not a member?"
+                    android:layout_marginRight="5dp"/>
+
+                <TextView
+                    android:id="@+id/registerNavBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Register now"
+                    android:textColor="#0D2FEA"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
 
 
 </LinearLayout>

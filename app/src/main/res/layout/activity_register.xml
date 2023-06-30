@@ -9,85 +9,99 @@
     android:background="#FFFFFF"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="250dp"
-        android:src="@drawable/saving"
-        android:layout_gravity="center"
-        />
-
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Register"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:textSize="32dp"
-        />
-
-
-    <EditText
-        android:id="@+id/usernameEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edittextbackground"
-        android:padding="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="15dp"
-        android:hint="Username" />
-
-    <EditText
-        android:id="@+id/passwordEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:background="@drawable/edittextbackground"
-        android:hint="Password"
-        android:layout_marginBottom="15dp"
-        android:padding="16dp"/>
-
-    <EditText
-        android:id="@+id/retypePasswordEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:background="@drawable/edittextbackground"
-        android:hint="Retype password"
-        android:layout_marginBottom="15dp"
-        android:padding="16dp"/>
-
-    <Button
-        android:id="@+id/signupButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#3A55DD"
-        android:paddingVertical="15dp"
-        android:gravity="center"
-        android:text="Sign up" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="30dp">
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Had an account?"
-            android:layout_marginRight="5dp"/>
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:src="@drawable/logo"
+                android:layout_gravity="center"
+                android:layout_marginVertical="20dp"
+                />
 
-        <TextView
-            android:id="@+id/loginNavBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Login now"
-            android:textColor="#0D2FEA"/>
+            <TextView
+                android:id="@+id/register_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="32dp"
+                />
 
-    </LinearLayout>
+
+            <EditText
+                android:id="@+id/usernameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittextbackground"
+                android:padding="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:hint="Username" />
+
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:background="@drawable/edittextbackground"
+                android:hint="Password"
+                android:layout_marginBottom="15dp"
+                android:padding="16dp"/>
+
+            <EditText
+                android:id="@+id/retypePasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:background="@drawable/edittextbackground"
+                android:hint="Retype password"
+                android:layout_marginBottom="15dp"
+                android:padding="16dp"/>
+
+            <Button
+                android:id="@+id/signupButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#3A55DD"
+                android:paddingVertical="15dp"
+                android:gravity="center"
+                android:text="Sign up" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/had_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Had an account?"
+                    android:layout_marginRight="5dp"/>
+
+                <TextView
+                    android:id="@+id/loginNavBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login now"
+                    android:textColor="#0D2FEA"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
 
 
 </LinearLayout>

@@ -6,18 +6,19 @@
     android:padding="32dp">
 
     <TextView
-        android:id="@+id/add_category_label"
+        android:id="@+id/update_category_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Category"
-        android:textSize="21dp"
+        android:text="Update Category"
+        android:textSize="20dp"
         android:textColor="#29B029"
+        android:gravity="center"
         android:textStyle="bold"
         android:layout_marginBottom="28dp"
         />
 
     <TextView
-        android:id="@+id/add_category_type_label"
+        android:id="@+id/update_category_type_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Type"
@@ -48,7 +49,7 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/add_category_category_name_label"
+        android:id="@+id/update_category_name_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Category name"
@@ -66,10 +67,10 @@
 
 
     <Button
-        android:id="@+id/addCategoryButton"
+        android:id="@+id/updateCategoryButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#29B029"
         android:paddingVertical="15dp"
-        android:text="Add Category" />
+        android:text="Update" />
 </LinearLayout>

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setting_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SettingsFragment">
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -14,15 +16,16 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="81dp"
+            android:layout_height="wrap_content"
             android:padding="16dp">
 
             <TextView
-                android:layout_width="74dp"
+                android:id="@+id/settings_title"
+                android:layout_width="wrap_content"
                 android:layout_height="32dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:text="Profile"
+                android:text="Settings"
                 android:textColor="#29B029"
                 android:textSize="23sp"
                 android:textStyle="bold" />
@@ -31,12 +34,12 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="157dp">
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/avatar"
-                android:layout_width="138dp"
-                android:layout_height="138dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_centerInParent="true"
                 android:src="@drawable/avatar" />
 
@@ -45,25 +48,16 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="59dp">
+            android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/tv_username"
+                android:id="@+id/settings_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:text="John Doe"
                 android:textSize="18sp"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tv_email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_username"
-                android:layout_centerHorizontal="true"
-                android:text="johndoe@gmail.com"
-                android:textSize="14sp" />
 
         </RelativeLayout>
 
@@ -72,24 +66,24 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/tv_account_settings"
+                android:id="@+id/settings_general_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Account settings"
+                android:text="General"
                 android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textSize="14dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_account_settings"
-                android:layout_marginTop="10dp"
+                android:layout_below="@+id/settings_general_label"
+                android:layout_marginTop="5dp"
                 android:gravity="center"
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/settings_category_list"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -104,11 +98,11 @@
                         android:layout_gravity="center"/>
 
                     <TextView
-                        android:id="@+id/tv_account_information"
+                        android:id="@+id/settings_category_label"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Account information"
-                        android:textSize="14sp"
+                        android:text="Category"
+                        android:textSize="15dp"
                         android:textStyle="bold"
                         android:layout_marginStart="8dp"
                         android:layout_gravity="center"/>
@@ -116,6 +110,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/changepassword_nav_btn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -130,11 +125,11 @@
                         android:layout_gravity="center"/>
 
                     <TextView
-                        android:id="@+id/tv_change_password"
+                        android:id="@+id/settings_change_password_label"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Change password"
-                        android:textSize="14sp"
+                        android:textSize="15dp"
                         android:textStyle="bold"
                         android:layout_marginStart="8dp"
                         android:layout_gravity="center"/>
@@ -151,24 +146,24 @@
             android:layout_marginTop="-20dp">
 
             <TextView
-                android:id="@+id/tv_general"
+                android:id="@+id/settings_about_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="General"
+                android:text="About"
                 android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textSize="16dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_general"
-                android:layout_marginTop="10dp"
+                android:layout_below="@+id/settings_about_label"
+                android:layout_marginTop="5dp"
                 android:gravity="center"
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/about_us_btn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -183,11 +178,11 @@
                         android:layout_gravity="center"/>
 
                     <TextView
-                        android:id="@+id/tv_about_us"
+                        android:id="@+id/settings_aboutus_label"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="About us"
-                        android:textSize="14sp"
+                        android:textSize="15dp"
                         android:textStyle="bold"
                         android:layout_marginStart="8dp"
                         android:layout_gravity="center"/>
@@ -210,24 +205,17 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="180dp"
-                    android:layout_height="46dp"
-                    android:orientation="horizontal"
-                    android:background="@drawable/rounded_background"
-                    android:padding="10dp"
-                    android:layout_marginBottom="10dp">
+                <Button
+                    android:id="@+id/logout_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="50dp"
+                    android:paddingVertical="15dp"
+                    android:text="Log out"
+                    android:backgroundTint="#CF1717"
+                    />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Log out"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:textColor="#FFFFFF"
-                        android:gravity="center"/>
 
-                </LinearLayout>
 
 
             </LinearLayout>

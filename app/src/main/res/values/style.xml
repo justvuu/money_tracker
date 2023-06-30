@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BottomNavItemActive" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/font_bottom_nav</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+</resources>
